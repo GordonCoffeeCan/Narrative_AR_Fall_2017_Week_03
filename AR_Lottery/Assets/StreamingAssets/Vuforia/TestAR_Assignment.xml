@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="FloorMap" size="1.000000 1.333333" />
+    <ImageTarget name="Arcade_2_Screen" size="1.000000 0.891365" />
+    <ImageTarget name="Arcade_1_Pad" size="1.000000 0.489529" />
+    <ImageTarget name="Arcade_1_Screen" size="1.000000 0.817029" />
     <ImageTarget name="T_Rex" size="1.000000 1.400391" />
     <ImageTarget name="Mushroom" size="1.000000 1.400391" />
   </Tracking>
