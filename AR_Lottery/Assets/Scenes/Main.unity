@@ -8970,7 +8970,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 615ceac687a74803b782c1f5174a7bd3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 213ce2370ebf4843a97bd0d6c9713873, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -10629,7 +10629,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.4301075, y: 0, z: 0.5}
+      m_Extent: {x: 0.5, y: 0, z: 0.2447645}
   m_Shapes:
     vertices: []
     shapes: []
@@ -10681,7 +10681,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 0d37dcbe00000000000000bf00000000ffff7f3f0000000000000000000000000d37dcbe000000000000003f00000000ffff7f3f00000000000000000000803f0d37dc3e00000000000000bf00000000ffff7f3f000000000000803f000000000d37dc3e000000000000003f00000000ffff7f3f000000000000803f0000803f
+    _typelessdata: 000000bf000000008ca37abe000000000000803f000000000000000000000000000000bf000000008ca37a3e000000000000803f00000000000000000000803f0000003f000000008ca37abe000000000000803f000000000000803f000000000000003f000000008ca37a3e000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -12311,10 +12311,10 @@ MonoBehaviour:
   mSmartTerrainOccluderOffset: {x: 0, y: 0, z: 0}
   mSmartTerrainOccluderRotation: {x: 0, y: 0, z: 0, w: 0}
   mAutoSetOccluderFromTargetSize: 0
-  mAspectRatio: 1.1625
+  mAspectRatio: 0.489529
   mImageTargetType: 0
-  mWidth: 1
-  mHeight: 0.817029
+  mWidth: 0.860215
+  mHeight: 1
 --- !u!4 &836307632
 Transform:
   m_ObjectHideFlags: 0
@@ -14822,11 +14822,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4098256496427214, guid: f4b4cbad10f345c4fa7bb5770e9e73a5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.08
+      value: 0.346
       objectReference: {fileID: 0}
     - target: {fileID: 4098256496427214, guid: f4b4cbad10f345c4fa7bb5770e9e73a5, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.745
       objectReference: {fileID: 0}
     - target: {fileID: 4098256496427214, guid: f4b4cbad10f345c4fa7bb5770e9e73a5, type: 2}
       propertyPath: m_LocalRotation.x
@@ -15173,7 +15173,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 299d94ff681c46789c3f79e54bf7e859, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5f6ddb9549ad447a849856c838cb1c1e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -16249,8 +16249,8 @@ MonoBehaviour:
   mAutoSetOccluderFromTargetSize: 0
   mAspectRatio: 1.385833
   mImageTargetType: 0
-  mWidth: 1
-  mHeight: 0.757362
+  mWidth: 0.72158766
+  mHeight: 1
 --- !u!4 &1541979346
 Transform:
   m_ObjectHideFlags: 0
@@ -18193,7 +18193,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: f2843724bfc549a19bad999aaa321bcd, type: 3}
+        m_Texture: {fileID: 2800000, guid: 17995261c3ff4507a8382d2bef405e27, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
