@@ -33,7 +33,7 @@ public class Pumpkin : MonoBehaviour {
 
         Debug.Log(simulatePhysics);
 
-        if (!simulatePhysics) {
+        if (simulatePhysics == false) {
             rig.isKinematic = true;
         }
     }

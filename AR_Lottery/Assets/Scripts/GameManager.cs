@@ -1,10 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
     public static GameManager instance;
+
+    public bool outputPortalFound = false;
+    public bool floorMapFound = false;
+    public bool inputPortalFound = false;
+    public bool pumpkinGoesIn = false;
+    [SerializeField] private bool gotAPumpkin = false;
+    [SerializeField] private bool isPumpkinOpened = false;
 
     [SerializeField] private Pumpkin pumpkin;
     [SerializeField] private Transform portal;
@@ -15,13 +24,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private Transform t_rex;
     [SerializeField] private Transform poop;
 
-    [SerializeField] private bool gotAPumpkin = false;
-    [SerializeField] private bool isPumpkinOpened = false;
-
-    public bool outputPortalFound = false;
-    public bool floorMapFound = false;
-    public bool inputPortalFound = false;
-    public bool pumpkinGoesIn = false;
+    [SerializeField] private Button resetGameBtn;
 
     private int luckyNumber = 0;
 
@@ -38,13 +41,18 @@ public class GameManager : MonoBehaviour {
         t_rex.gameObject.SetActive(false);
         poop.gameObject.SetActive(false);
 
+        if(resetGameBtn != null) {
+            resetGameBtn.gameObject.SetActive(false);
+        }
     }
 	
 	// Update is called once per frame
 	void Update () {
         RaycastHit _hit;
 
-        ResetGame();
+        if (inputPortalFound && isPumpkinOpened == true) {
+            resetGameBtn.gameObject.SetActive(true);
+        }
 
         if (outputPortalFound && gotAPumpkin == false) {
             currentTimer -= Time.deltaTime;
@@ -109,23 +117,7 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    private void ResetGame() {
-        if (outputPortalFound && isPumpkinOpened == true) {
-            gotAPumpkin = false;
-            isPumpkinOpened = false;
-            pumpkinGoesIn = false;
-
-            if (catchedPumpkin != null) {
-                catchedPumpkin.simulatePhysics = true;
-                catchedPumpkin.selfDestroy = true;
-                gotAPumpkin = false;
-            }
-
-            luckyNumber = Random.Range(1, 15);
-            coins.gameObject.SetActive(false);
-            cash.gameObject.SetActive(false);
-            t_rex.gameObject.SetActive(false);
-            poop.gameObject.SetActive(false);
-        }
+    public void ResetGame() {
+        SceneManager.LoadScene(0);
     }
 }
