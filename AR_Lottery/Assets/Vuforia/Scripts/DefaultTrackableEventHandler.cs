@@ -48,21 +48,31 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
             OnTrackingFound();
 
+            //Check the arcade when scaning ---------------------------------------------------------------
             if(mTrackableBehaviour.TrackableName + " found" == "Arcade_1_Screen found") {
                 GameManager.instance.outputPortalFound = true;
             }
-        }
-        else if (previousStatus == TrackableBehaviour.Status.TRACKED &&
+
+            if(mTrackableBehaviour.TrackableName + " found" == "Arcade_2_Screen found") {
+                GameManager.instance.inputPortalFound = true;
+            }
+            //Check the arcade when scaning ---------------------------------------------------------------
+        } else if (previousStatus == TrackableBehaviour.Status.TRACKED &&
                  newStatus == TrackableBehaviour.Status.NOT_FOUND)
         {
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
             OnTrackingLost();
 
+            //Check the arcade when scaning ---------------------------------------------------------------
             if (mTrackableBehaviour.TrackableName + " lost" == "Arcade_1_Screen lost") {
                 GameManager.instance.outputPortalFound = false;
             }
-        }
-        else
+
+            if (mTrackableBehaviour.TrackableName + " lost" == "Arcade_2_Screen lost") {
+                GameManager.instance.inputPortalFound = false;
+            }
+            //Check the arcade when scaning ---------------------------------------------------------------
+        } else
         {
             // For combo of previousStatus=UNKNOWN + newStatus=UNKNOWN|NOT_FOUND
             // Vuforia is starting, but tracking has not been lost or found yet

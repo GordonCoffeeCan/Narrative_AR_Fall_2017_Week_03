@@ -7559,21 +7559,6 @@ Transform:
   m_Father: {fileID: 1541979346}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!1 &158098480 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100000, guid: 78d99f32db8007349bf318302a95f166, type: 3}
-  m_PrefabInternal: {fileID: 1524683322}
---- !u!114 &158098484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 158098480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfc9e4fd49f14a544a91243c7ceec77d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &158098485 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 78d99f32db8007349bf318302a95f166, type: 3}
@@ -11692,9 +11677,12 @@ MonoBehaviour:
   cash: {fileID: 152790674}
   t_rex: {fileID: 1804190904}
   poop: {fileID: 1801001293}
+  gotAPumpkin: 0
+  isPumpkinOpened: 0
   outputPortalFound: 0
   floorMapFound: 0
   inputPortalFound: 0
+  pumpkinGoesIn: 0
 --- !u!1 &814119248
 GameObject:
   m_ObjectHideFlags: 0
@@ -12688,6 +12676,34 @@ Transform:
   m_Father: {fileID: 2105105939}
   m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &937620716 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1319984875061710, guid: f4b4cbad10f345c4fa7bb5770e9e73a5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1416768833}
+--- !u!65 &937620717
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 937620716}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 10, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &937620718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 937620716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a43f82f107e69c34792874275e360d14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &946258338
 GameObject:
   m_ObjectHideFlags: 0
@@ -18980,7 +18996,7 @@ GameObject:
   - component: {fileID: 2062914864}
   m_Layer: 0
   m_Name: ARCamera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
