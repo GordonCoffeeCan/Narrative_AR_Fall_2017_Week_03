@@ -47,12 +47,20 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         {
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
             OnTrackingFound();
+
+            if(mTrackableBehaviour.TrackableName + " found" == "Arcade_1_Screen found") {
+                GameManager.instance.outputPortalFound = true;
+            }
         }
         else if (previousStatus == TrackableBehaviour.Status.TRACKED &&
                  newStatus == TrackableBehaviour.Status.NOT_FOUND)
         {
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
             OnTrackingLost();
+
+            if (mTrackableBehaviour.TrackableName + " lost" == "Arcade_1_Screen lost") {
+                GameManager.instance.outputPortalFound = false;
+            }
         }
         else
         {
