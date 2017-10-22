@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 9a4f8a3ec01ca493c8a4d26d0edcb490
+timeCreated: 1508455583
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: ShallowGrave BB
+  fontNames:
+  - ShallowGrave BB
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 00d766c62677f4f048c7fdc48a532c28, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
