@@ -87,8 +87,9 @@ public class GameManager : MonoBehaviour {
         }
 
         if(catchedPumpkin != null && pumpkinGoesIn == false) {
-            catchedPumpkin.transform.position = Vector3.Lerp(catchedPumpkin.transform.position, Camera.main.transform.forward * 0.5f, 0.15f);
-            catchedPumpkin.transform.rotation = Quaternion.Slerp(catchedPumpkin.transform.rotation, Quaternion.Euler(Vector3.zero), 0.15f);
+            catchedPumpkin.transform.position = Vector3.Lerp(catchedPumpkin.transform.position, Camera.main.transform.position + Camera.main.transform.forward * 2, 0.15f);
+            catchedPumpkin.transform.LookAt(Camera.main.transform);
+            //catchedPumpkin.transform.rotation = Quaternion.Slerp(catchedPumpkin.transform.rotation, Quaternion.Euler(new Vector3(Camera.main.transform.rotation.eulerAngles.x - 90, -Camera.main.transform.rotation.eulerAngles.y, -Camera.main.transform.rotation.eulerAngles.z)), 0.15f);
         }
 
         if (inputPortalFound) {
