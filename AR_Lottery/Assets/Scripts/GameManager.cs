@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour {
             }
         }
 
-        if(catchedPumpkin != null && pumpkinGoesIn == false) {
+        if(catchedPumpkin != null && pumpkinGoesIn == false && !inputPortalFound) {
             catchedPumpkin.transform.position = Camera.main.transform.position + Camera.main.transform.forward * 2;
             catchedPumpkin.transform.rotation = Camera.main.transform.rotation;
         }
